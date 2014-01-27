@@ -9,6 +9,7 @@ public partial class ProductInfo : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+      
         // sets Application states when they have no value
         if (Session["CustID"] == null)
         {

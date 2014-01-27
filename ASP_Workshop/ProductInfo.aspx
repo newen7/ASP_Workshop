@@ -62,13 +62,13 @@
                             <asp:Label ID="ItineraryNoLabel" runat="server" Text='<%# Eval("ItineraryNo") %>' />
                         </td>
                         <td>
-                            <asp:Label ID="TripStartLabel" runat="server" Text='<%# Eval("TripStart") %>' />
+                            <asp:Label ID="TripStartLabel" runat="server" Text='<%# Eval("TripStart", "{0:d}") %>' />
                         </td>
                         <td>
-                            <asp:Label ID="TripEndLabel" runat="server" Text='<%# Eval("TripEnd") %>' />
+                            <asp:Label ID="TripEndLabel" runat="server" Text='<%# Eval("TripEnd", "{0:d}") %>' />
                         </td>
                         <td>
-                            <asp:Label ID="BasePriceLabel" runat="server" Text='<%# Eval("BasePrice") %>' />
+                            <asp:Label ID="BasePriceLabel" runat="server" Text='<%# Eval("BasePrice", "{0:c}") %>' />
                         </td>
                         <td>
                             <asp:Label ID="ProductIdLabel" runat="server" Text='<%# Eval("ProductId") %>' />
@@ -100,13 +100,13 @@
                             <asp:TextBox ID="ItineraryNoTextBox" runat="server" Text='<%# Bind("ItineraryNo") %>' />
                         </td>
                         <td>
-                            <asp:TextBox ID="TripStartTextBox" runat="server" Text='<%# Bind("TripStart") %>' />
+                            <asp:TextBox ID="TripStartTextBox" runat="server" Text='<%# Bind("TripStart", "{0:d}") %>' />
                         </td>
                         <td>
-                            <asp:TextBox ID="TripEndTextBox" runat="server" Text='<%# Bind("TripEnd") %>' />
+                            <asp:TextBox ID="TripEndTextBox" runat="server" Text='<%# Bind("TripEnd", "{0:d}") %>' />
                         </td>
                         <td>
-                            <asp:TextBox ID="BasePriceTextBox" runat="server" Text='<%# Bind("BasePrice") %>' />
+                            <asp:TextBox ID="BasePriceTextBox" runat="server" Text='<%# Bind("BasePrice", "{0:c}") %>' />
                         </td>
                         <td>
                             <asp:TextBox ID="ProductIdTextBox" runat="server" Text='<%# Bind("ProductId") %>' />
@@ -145,13 +145,13 @@
                             <asp:TextBox ID="ItineraryNoTextBox" runat="server" Text='<%# Bind("ItineraryNo") %>' />
                         </td>
                         <td>
-                            <asp:TextBox ID="TripStartTextBox" runat="server" Text='<%# Bind("TripStart") %>' />
+                            <asp:TextBox ID="TripStartTextBox" runat="server" Text='<%# Bind("TripStart", "{0:d}") %>' />
                         </td>
                         <td>
-                            <asp:TextBox ID="TripEndTextBox" runat="server" Text='<%# Bind("TripEnd") %>' />
+                            <asp:TextBox ID="TripEndTextBox" runat="server" Text='<%# Bind("TripEnd", "{0:d}") %>' />
                         </td>
                         <td>
-                            <asp:TextBox ID="BasePriceTextBox" runat="server" Text='<%# Bind("BasePrice") %>' />
+                            <asp:TextBox ID="BasePriceTextBox" runat="server" Text='<%# Bind("BasePrice", "{0:c}") %>' />
                         </td>
                         <td>
                             <asp:TextBox ID="ProductIdTextBox" runat="server" Text='<%# Bind("ProductId") %>' />
@@ -179,13 +179,13 @@
                             <asp:Label ID="ItineraryNoLabel" runat="server" Text='<%# Eval("ItineraryNo") %>' />
                         </td>
                         <td>
-                            <asp:Label ID="TripStartLabel" runat="server" Text='<%# Eval("TripStart") %>' />
+                            <asp:Label ID="TripStartLabel" runat="server" Text='<%# Eval("TripStart", "{0:d}") %>' />
                         </td>
                         <td>
-                            <asp:Label ID="TripEndLabel" runat="server" Text='<%# Eval("TripEnd") %>' />
+                            <asp:Label ID="TripEndLabel" runat="server" Text='<%# Eval("TripEnd", "{0:d}") %>' />
                         </td>
                         <td>
-                            <asp:Label ID="BasePriceLabel" runat="server" Text='<%# Eval("BasePrice") %>' />
+                            <asp:Label ID="BasePriceLabel" runat="server" Text='<%# Eval("BasePrice", "{0:c}") %>' />
                         </td>
                         <td>
                             <asp:Label ID="ProductIdLabel" runat="server" Text='<%# Eval("ProductId") %>' />
@@ -246,13 +246,13 @@
                             <asp:Label ID="ItineraryNoLabel" runat="server" Text='<%# Eval("ItineraryNo") %>' />
                         </td>
                         <td>
-                            <asp:Label ID="TripStartLabel" runat="server" Text='<%# Eval("TripStart") %>' />
+                            <asp:Label ID="TripStartLabel" runat="server" Text='<%# Eval("TripStart", "{0:d}") %>' />
                         </td>
                         <td>
-                            <asp:Label ID="TripEndLabel" runat="server" Text='<%# Eval("TripEnd") %>' />
+                            <asp:Label ID="TripEndLabel" runat="server" Text='<%# Eval("TripEnd", "{0:d}") %>' />
                         </td>
                         <td>
-                            <asp:Label ID="BasePriceLabel" runat="server" Text='<%# Eval("BasePrice") %>' />
+                            <asp:Label ID="BasePriceLabel" runat="server" Text='<%# Eval("BasePrice", "{0:c}") %>' />
                         </td>
                         <td>
                             <asp:Label ID="ProductIdLabel" runat="server" Text='<%# Eval("ProductId") %>' />
