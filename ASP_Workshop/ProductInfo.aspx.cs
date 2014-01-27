@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Package : System.Web.UI.Page
+public partial class ProductInfo : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -20,7 +20,7 @@ public partial class Package : System.Web.UI.Page
         else
         {
             //customerId = Convert.ToInt32(Session["CustID"]);
-            lblTest.Text = "CustID = " + Session["CustID"];
+            //lblTest.Text = "CustID = " + Session["CustID"];
         }
     }
 }

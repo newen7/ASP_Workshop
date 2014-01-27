@@ -5,7 +5,6 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.ComponentModel;
 
-
 [DataObject(true)]
 public static class CustomerDB
 {
@@ -42,11 +41,16 @@ public static class CustomerDB
     {
         Customer CustomerGot = new Customer();
         //List<Customer> customerList = new List<Customer>();
-        string sel = "SELECT CustomerId, CustFirstName, CustLastName, " 
-                + "CustAddress, CustCity, CustProv, CustPostal, CustCountry, CustHomePhone, " 
+        string sel = "SELECT CustomerId, CustFirstName + ' ' + CustLastName as FullName, "
+                + "CustAddress, CustCity, CustProv, CustPostal, CustCountry, CustHomePhone, "
               + "CustBusPhone, CustEmail, AgentId "
             + "FROM Customers "
             + "WHERE CustomerId = @CustomerId";
+    //    string sel = "SELECT CustomerId, CustFirstName, CustLastName, "
+    //    + "CustAddress, CustCity, CustProv, CustPostal, CustCountry, CustHomePhone, "
+    //  + "CustBusPhone, CustEmail, AgentId "
+    //+ "FROM Customers "
+    //+ "WHERE CustomerId = @CustomerId";
         using (SqlConnection con = TravelExpertsDB.GetConnection())
         {
             using (SqlCommand cmd = new SqlCommand(sel, con))
@@ -61,8 +65,7 @@ public static class CustomerDB
                     CustomerGot = new Customer((int)readerObj[0], (string)readerObj[1], 
                         (string)readerObj[2], (string)readerObj[3], (string)readerObj[4], 
                         (string)readerObj[5], (string)readerObj[6], (string)readerObj[7], 
-                        (string)readerObj[8], (string)readerObj[9], (string)readerObj[10], 
-                        (int)readerObj[11]);
+                        (string)readerObj[8], (string)readerObj[9], (int)readerObj[10]);
                 //}
                 readerObj.Close();
             }
@@ -76,9 +79,11 @@ public static class CustomerDB
         SqlConnection connection = TravelExpertsDB.GetConnection(); //get connection string from main TravelExpertsDB static class
         Customer CustomerGot = new Customer();
         //sql statement finds all accociated products
-        string sql = "Select * "
-                    + "from Customers "
-                    + "where CustomerId = @custId";
+        string sql = "SELECT CustomerId, CustFirstName + ' ' + CustLastName as FullName, "
+                + "CustAddress, CustCity, CustProv, CustPostal, CustCountry, CustHomePhone, "
+              + "CustBusPhone, CustEmail, AgentId "
+            + "FROM Customers "
+            + "WHERE CustomerId = @CustomerId";
         SqlCommand selectCommand = new SqlCommand(sql, connection);
         selectCommand.Parameters.AddWithValue("@custId", custId);
         try
@@ -88,7 +93,7 @@ public static class CustomerDB
             while (readerObj.Read()) //while readerObj has lines to read, go through each one 
             {
                 //add to product list all of the products found
-                CustomerGot = new Customer((int)readerObj[0], (string)readerObj[1], (string)readerObj[2], (string)readerObj[3], (string)readerObj[4], (string)readerObj[5], (string)readerObj[6], (string)readerObj[7], (string)readerObj[8], (string)readerObj[9], (string)readerObj[10], (int)readerObj[11]);
+                CustomerGot = new Customer((int)readerObj[0], (string)readerObj[1], (string)readerObj[2], (string)readerObj[3], (string)readerObj[4], (string)readerObj[5], (string)readerObj[6], (string)readerObj[7], (string)readerObj[8], (string)readerObj[9], (int)readerObj[10]);
             }
         }
         catch (Exception ex) //catch exceptions

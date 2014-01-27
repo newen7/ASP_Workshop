@@ -35,7 +35,7 @@ public partial class _Default : System.Web.UI.Page
         if (Session["CustID"] != null)
         {
             // goes to the result form
-            Response.Redirect("~/Package.aspx");
+            Response.Redirect("~/ProductInfo.aspx");
         }
         else
             lblTest.Text = "Plese select customer before viewing packages.";

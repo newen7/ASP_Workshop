@@ -8,18 +8,19 @@ using System.Web;
 /// </summary>
 public class Customer
 {
-    public int customerId;
-    public string custFirstName;
-    public string custLastName;
-    public string custAddress;
-    public string custCity;
-    public string custProv;
-    public string custPostal;
-    public string custCountry;
-    public string custHomePhone;
-    public string custBusPhone;
-    public string custEmail;
-    public int agentId;
+    private int customerId;
+    private string custFirstName;
+    private string custLastName;
+    private string custAddress;
+    private string custCity;
+    private string custProv;
+    private string custPostal;
+    private string custCountry;
+    private string custHomePhone;
+    private string custBusPhone;
+    private string custEmail;
+    private int agentId;
+    private string fullName;
 
     public int CustomerId
     {
@@ -81,6 +82,11 @@ public class Customer
         get { return agentId; }
         set { agentId = value; }
     }
+    public string FullName
+    {
+        get { return fullName; }
+        set { fullName = value; }
+    }
 
 	public Customer()
 	{
@@ -102,6 +108,31 @@ public class Customer
         CustomerId = newCustomerId;
         CustFirstName = newCustFirstName;
         CustLastName = newCustLastName;
+        CustAddress = newCustAddress;
+        CustCity = newCustCity;
+        CustProv = newCustProv;
+        CustPostal = newCustPostal;
+        CustCountry = newCustCountry;
+        CustHomePhone = newCustHomePhone;
+        CustBusPhone = newCustBusPhone;
+        CustEmail = newCustEmail;
+        AgentId = newAgentId;
+    }
+
+    public Customer(int newCustomerId, //full constructor
+        string newFullName,
+        string newCustAddress,
+        string newCustCity,
+        string newCustProv,
+        string newCustPostal,
+        string newCustCountry,
+        string newCustHomePhone,
+        string newCustBusPhone,
+        string newCustEmail,
+        int newAgentId)
+    {
+        CustomerId = newCustomerId;
+        FullName = newFullName;
         CustAddress = newCustAddress;
         CustCity = newCustCity;
         CustProv = newCustProv;

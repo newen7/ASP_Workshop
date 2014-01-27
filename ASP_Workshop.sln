@@ -1,8 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ASP_Workshop", "ASP_Workshop\", "{E1F01B53-E0E6-4F84-8F2F-F9C0060AB03E}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ASP_Workshop", "http://localhost:55228", "{E1F01B53-E0E6-4F84-8F2F-F9C0060AB03E}"
 	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/ASP_Workshop"
 		Debug.AspNetCompiler.PhysicalPath = "ASP_Workshop\"
@@ -18,7 +19,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ASP_Workshop", "ASP_Worksho
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "55228"
+		SlnRelativePath = "ASP_Workshop\"
 	EndProjectSection
 EndProject
 Global
